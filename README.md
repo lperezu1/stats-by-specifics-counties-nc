@@ -9,3 +9,6 @@ UNDEFINED:
 Dem: 17140	
 Rep: 7885	
 Una: 35877 
+
+
+Lib/ green party are not included in the tables. 
