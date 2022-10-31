@@ -18,6 +18,7 @@ library(fuzzyjoin)
 all_stats = read.delim("./ncvoter_Statewide.txt", sep = "\t")
 ```
 
+# BY DATABESES
 ```{r}
 NASH_voters = read.delim("./ncvoter64.txt", sep = "\t")
 SCOTLAND_voters = read.delim("./ncvoter83.txt", sep = "\t")
@@ -27,7 +28,7 @@ MECKLENBURG_voters = read.delim("./ncvoter60.txt", sep = "\t")
 DURHAM_voters = read.delim("./ncvoter32.txt", sep = "\t");
 ```
 
-# Import datasets
+# BY FILTERING
 ```{r}
 DURHAM_voters <- filter(all_stats ,county_desc == "DURHAM")
 NASH_voters <- filter(all_stats ,county_desc == "NASH")
@@ -102,6 +103,7 @@ SCOTLAND_stats
 
 # Export data
 ```{r}
+write.csv(ALL_COUNTIES_stats , file = "ALL_COUNTIES_stats.csv")
 write.csv(DURHAM_stats , file = "DURHAM_stats.csv")
 write.csv(MECKLENBURG_stats , file = "MECKLENBURG_stats.csv")
 write.csv(NASH_stats , file = "NASH_stats.csv")
